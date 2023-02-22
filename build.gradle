@@ -1,10 +1,12 @@
 plugins {
   id 'java'
-  id 'org.springframework.boot' version '2.7.8'
+  //id 'org.springframework.boot' version '2.7.8' //oRIGINAL
+  id 'org.springframework.boot' version '2.1.8.RELEASE'
   id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
-group = 'com.bah.msd'
+//group = 'com.bah.msd' //ORIGINAL
+group = 'com.webage'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
