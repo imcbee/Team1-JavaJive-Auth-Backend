@@ -41,9 +41,11 @@ public class TokenAPI {
 		if (username != null && username.length() > 0 && password != null && password.length() > 0 && checkPassword(username, password)) {
 			Token token = createToken(username);
 			ResponseEntity<?> response = ResponseEntity.ok(token);
+			System.out.println("ITS WORKINGGGG!!!!!!!!!!!!!!!!!!!!!!!");
 			return response;			
 		}
 		// bad request
+		System.out.println("BBBBBBRRRROOOKENNNN!!!!!!!!!!!!!!!!!!!!!!!");
 		return (ResponseEntity<?>) ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 		
 	}
