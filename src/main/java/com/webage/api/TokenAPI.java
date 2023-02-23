@@ -41,9 +41,11 @@ public class TokenAPI {
 		if (username != null && username.length() > 0 && password != null && password.length() > 0 && checkPassword(username, password)) {
 			Token token = createToken(username);
 			ResponseEntity<?> response = ResponseEntity.ok(token);
+			System.out.println("ITS WORKINGGGG!!!!!!!!!!!!!!!!!!!!!!!");
 			return response;			
 		}
 		// bad request
+		System.out.println("BBBBBBRRRROOOKENNNN!!!!!!!!!!!!!!!!!!!!!!!");
 		return (ResponseEntity<?>) ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 		
 	}
@@ -84,10 +86,10 @@ public class TokenAPI {
 	}
 	
     private static Token createToken(String username) {
-    	String scopes = "com.webage.data.apis";
+    	String scopes = "com.bah.mcc.day1.data.apis";
     	// special case for application user
     	if( username.equalsIgnoreCase("ApiClientApp")) {
-    		scopes = "com.webage.auth.apis";
+    		scopes = "com.bah.mcc.day1.auth.apis";
     	}
     	String token_string = JWTHelper.createToken(scopes);
     	
