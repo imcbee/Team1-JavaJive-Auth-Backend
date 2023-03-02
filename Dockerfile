@@ -1,7 +1,7 @@
-FROM gradle as builder
+FROM gradle:7 as builder
 COPY --chown=gradle:gradle . /app
 WORKDIR /app
-RUN gradle bootJar
+RUN gradle bootjar
 
 FROM openjdk:8-jdk-alpine
 EXPOSE 8081
