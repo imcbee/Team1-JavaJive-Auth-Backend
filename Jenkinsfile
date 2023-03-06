@@ -23,7 +23,7 @@ node {
     }
     
     stage ("Run Docker container instance - AuthApi"){
-        sh "docker run -d --rm --name mcc-auth -p 8081:8081 mcc-auth:v1.0"
+        sh "docker run -d --name mcc-auth -p 8081:8081 mcc-auth:v1.0"
      }
     
     stage('User Acceptance Test - AuthService') {
